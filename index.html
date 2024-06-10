@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link type="text/css" rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+    <main>  
+        
+<div class="container">
+<form action="cadastraCliente.php" method="post">
+        <h1> Cadastro de Cliente</h1>
+      
+    <fieldset>
+        <legend>Dados Pessoais</legend>
+        <p><label for="seunome">Nome:</label> 
+            <input minlength="2" maxlength="50" type="text" name="Nome" id="seunome" title="escreva um texto contendo de 2 a 50 caracteres" autofocus required></p>
+        <p><label for="seuemail">E-mail:</label> 
+            <input type="email" name="email" id="seuemail" required></p>
+        <p><label for="seuCPF">CPF:</label> 
+            <input type="text" name="CPF" id="seuCPF" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="digite um cpf válido no formato XXX.XXX.XXX-XX" required></p>
+        <p><label for="suaIdade">Idade:</label> 
+            <input type="number" name="Idade" id="suaIdade" required></p>
+        <p><label for="seutelefone">Telefone:</label> 
+            <input type="tel" name="Telefone" id="seutelefone" required></p>
+        <p><label for="adata">Data de Nascimento:</label> 
+            <input type="date" name="Data" id="adata"></p>
+        <p><p><label for="seusexo">Sexo:</label>
+            <select name="Sexo" id="seusexo">
+                     <option value="Masculino">Masculino</option>
+                     <option value="Feminino">Feminino</option>
+            </select>
+
+        <p><label for="seuestadocivil">Estado civil:</label> 
+            <select name="estado civil" id="seuestadocivil">
+                        <option value="Solteiro">Solteiro(a)</option>
+                        <option value="Casado">Casado(a)</option>
+                        <option value="Divorciado">Divorciado(a)</option>
+                        <option value="Viúvo">Viúvo(a)</option>
+        </select>
+    </p>
+        <p><label for="suaNacionalidade">Nacionalidade:</label> 
+            <input type="text" name="Nacionalidade" id="suaNacionalidade" value="brasileira" readonly></p>
+
+        
+    </fieldset>
+    <fieldset>
+        <legend>Endereço de entrega</legend>
+            <p><label for="seucep">CEP:</label> 
+                <input type="text" name="CEP" id="seucep" required></p>
+            <p><label for="tipodoseulogradouro">Tipo de logradouro:</label> 
+                <select name="tipo de logradouro" id="tipodoseulogradouro" required>
+                <option value="" disabled selected>Selecione</option>
+                <option value="Rua">Rua</option>
+                <option value="Avenida">Avenida</option>
+                <option value="Travessa">Travessa</option>
+                <option value="Praça">Praça</option>
+                <option value="Vila">Vila</option>
+                <option value="Sítio">Sítio</option>
+                </select>
+            </p>
+            <p><label for="seulogradouro">logradouro:</label> 
+                <input type="text" name="logradouro" id="seulogradouro" required></p>
+            <p><label for="seuBairro">Bairro:</label> 
+                <input type="text" name="Bairro" id="seuBairro" required></p>
+            <p><label for="suaCidade">Cidade:</label> 
+                <input type="text" name="Cidade" id="suaCidade" required></p>
+            <p><label for="seuEstado">Estado:</label> 
+                <input type="text" name="Estado" id="seuEstado" required></p>
+    </fieldset>
+    <fieldset>
+        <legend>Informações adicionais</legend>
+        <p><label for="seusinteresses">Interesses:</label></p>
+        <select id="seusinteresses" name="opcoes" size="2">
+            <option value="opcao1">Filmes</option>
+            <option value="opcao2">Informática</option>
+            <option value="opcao3">Games</option>
+            <option value="opcao4">Livros</option>
+            <option value="opcao5">Esportes</option>
+            <option value="opcao6">Outros</option>
+        </select>
+            
+            <p><label for="complemento">Complemento:</label></p>
+            <textarea id="complemento" name="outrasinformações" rows="4" cols="50"></textarea>
+            
+            <p><label for="anexar">Anexar Arquivo:</label></p>
+            <input type="file" name="anexar arquivos" id="anexar">        
+    </fieldset>
+    <fieldset>
+        <button type="submit">Enviar</button>
+    </fieldset>
+        <input type="hidden" name="Formulário" value="Formulário">
+        </form>
+</div>
+    </main>
+
+
+    
+</body>
+</html>
